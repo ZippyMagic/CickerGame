@@ -11,39 +11,39 @@ var multiplier = 1;
 var i;
 
 function applyRarity() {
-  if(item["knife" + i].rarity !== "Common") {
-	    var pick = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+	if(item["knife" + i].rarity !== "Common") {
+		var pick = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
 	    
 	    if(item["knife" + i].rarity === "Rare") {
-	      if(pick <= 45) {
-	        return;
-	      } else {
-	        i = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
-	        applyRarity();
-	      }
+	      	if(pick <= 45) {
+	        	return;
+	      	} else {
+	        	i = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+	        	applyRarity();
+	      	}
 	    } else if(item["knife" + i].rarity === "Epic") {
-	      if(pick <= 20) {
-	        return;
-	      } else {
-	        i = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
-	        applyRarity()
-	      }
+	    	if(pick <= 20) {
+	        	return;
+	      	} else {
+	        	i = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+	        	applyRarity()
+	     	}
 	    } else if(item["knife" + i].rarity === "Legendary") {
-	      if(pick <= 7) {
-	        return;
-	      } else {
-	        i = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
-	        applyRarity()
-	      }
+	      	if(pick <= 7) {
+	        	return;
+	      	} else {
+	        	i = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+	        	applyRarity()
+	      	}
 	    } else if(item["knife" + i].rarity === "Unique") {
-	      if(pick === 1) {
-	        return;
-	      } else {
-	        i = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
-	        applyRarity()
-	      }
-	    }
-	  }
+	      	if(pick === 1) {
+	        	return;
+	      		} else {
+	        		i = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+	        		applyRarity()
+	    	}
+		}
+	}
 }
 function pickRandReward() {
 	if(money > 4) {
