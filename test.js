@@ -1,21 +1,17 @@
-var rewards = [
-	"Test1",
-	"Test2",
-	"Test3",
-	"Test4",
-	"Test5",
-	"Test6",
-	"Test7",
-	"Test8",
-	"Test9"
-]
+var rewards = {
+	knife1: {name: "Test1"},
+	knife2: {name: "Test2"},
+	knife3: {name: "Test3"},
+	knife4: {name: "Test4"},
+	knife5: {name: "Test5"}
+}
 var rewardRare = [
 	//Coming soon
 ]
 
 function pickRandReward() {
-	var i = Math.floor(Math.random() * (8 - 0 + 1)) + 0;
-	alert(rewards[i]);
+	var i = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
+	alert(rewards[i].name);
 }
 
 pickRandReward();
