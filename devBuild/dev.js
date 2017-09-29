@@ -65,7 +65,7 @@ function pickRandReward() {
 	  applyRarity()
 	  console.log("money: " + money);
 	  console.log("i: " + i);
-	  console.log("item: " + item["item" + i].name); // Can increase '5' and '1' to increase value
+	  console.log("item: " + item["item" + i].name);
 	} else {
 	  console.log("Error 001: Not enough money")
 	}
