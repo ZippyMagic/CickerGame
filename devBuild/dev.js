@@ -1,4 +1,4 @@
-// All Items you can get
+//--Variable Scope--
 var item = {
 	item1: {name: "Rusted Switchblade", rarity: "Common", price: "0.75"},
 	item2: {name: "Rusted Blade", rarity: "Common", price: "1.25"},
@@ -9,15 +9,16 @@ var item = {
 	item7: {name: "Double-Sided MK25 Switchblade", rarity: "Legendary", price: "36.25"},
 	item8: {name: "Useful Modified KAR98K w/t Bayonet", rarity: "Legendary", price: "64.50"},
 	item9: {name: "Sparkly Double-Sided Switchblade MK75", rarity: "Unique", price: "100.25"},
-	item10: {name: "Elongated Spiked Mace w/t Concealed Blade", rarity: "Unique", price: "105"}
+	item10: {name: "Elongated Spiked Mace w/t Concealed Blade", rarity: "Unique", price: "105.25"}
 };
 
 // Starting Settings
-var money = 5;
+var money = 5.50;
 var multiplier = 1; // Can go up by buying something
 
 var i;
 
+//--Function Scope--
 function randomNum() {
   return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
 }
@@ -57,9 +58,9 @@ function applyRarity() {
 	  }
 }
 function pickRandReward() {
-	if(money > 4) {
+	if(money > 5.49) {
 	  var money2 = money;
-	  money = money2 - 5;
+	  money = money2 - 5.50;
 	  i = randomNum();
 	  
 	  applyRarity();
@@ -76,4 +77,6 @@ function clickMoney(mult) {
   console.log("money: " + money);
 }
 
+
 pickRandReward(); // Test dry run
+
